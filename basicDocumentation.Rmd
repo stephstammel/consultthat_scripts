@@ -19,7 +19,9 @@ require(skimr)
 ```
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-data <- utils::read.csv(paste(getwd(), "/data/", params$nameFile, sep = ""), 
+location <- paste(getwd(), "/data/", params$nameFile, sep = "")
+print(location)
+data <- utils::read.csv(location, 
                         stringsAsFactors = FALSE, sep = ",")
 ```
 
