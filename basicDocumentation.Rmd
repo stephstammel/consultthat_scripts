@@ -20,7 +20,7 @@ require(skimr)
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 location <- paste("../", params$nameFile, sep = "")
-print(location)
+
 data <- utils::read.csv(location, 
                         stringsAsFactors = FALSE, sep = ",")
 ```
