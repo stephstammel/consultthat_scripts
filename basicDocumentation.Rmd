@@ -3,8 +3,8 @@ title: "Basic Documentation"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: html_document
 params:
-  nameFile: !r "first"
-  fileType: !r "csv"
+  nameFile: !r 1
+  fileType: !r 2017
 ---
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
@@ -14,6 +14,7 @@ params:
 
 requireNamespace(knitr)
 requireNamespace(tidyverse)
+requireNamespace(skimr)
 
 knitr::opts_knit$set(root.dir = paste(getwd(), "/data/documentation", sep = "")) # put this render into the documentation folder
 ```
