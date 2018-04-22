@@ -21,8 +21,11 @@ require(skimr)
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 location <- paste("../", params$nameFile, sep = "")
 
-data <- utils::read.csv(location, 
-                        stringsAsFactors = FALSE, sep = ",")
+data <- tryCatch(utils::read.csv(location, 
+                        stringsAsFactors = FALSE, sep = ","), 
+                 error = function(e) NULL)
+
+# solution discussed here: https://stackoverflow.com/questions/13613270/how-to-fix-the-error-in-r-of-no-lines-available-in-input?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 ```
 
 # `r params$nameFile` documentation
